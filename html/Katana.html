@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation des objets</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="../style/katana.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="container">
+        <p class="grostitre fade-out" id="title">Les samouraïs</p>
+
+        <div class="link fade-out" id="title">
+            <a href="#katana">Le katana : la fierté des samouraïs</a>
+        </div>
+        
+        <div class="row fade-in" id="katana">
+            <h1 id="title">Le katana : la fierté des samouraïs</h1>
+            <div class="col-6" id="objet">
+                <model-viewer
+                src="../3D/GLB/reposoire hahaha.glb"
+                camera-controls
+                autoplay>
+
+                </model-viewer>
+
+            </div>
+            <div class="col-6" id="texte">
+                <p>
+                    Tu marches dans la rue, et là tu vois un beau bâton par terre, tu es soudain pris d’une envie irrépressible 
+                    de le prendre et jouer avec, plus précisément d’en faire un magnifique sabre imaginaire, notamment un katana 
+                    des légendaires samouraïs.
+                </p>
+                <p>
+                    Pendant un court instant, tu te transformes en samouraï du Japon féodal, période de conflits, de guerre de 
+                    clans et de luttes féodales pendant près de quatre siècles, de 1185 jusqu’à 1603. Prêt à partir en campagne, 
+                    tu emmènes ton fidèle compagnon : ton katana, symbole de la classe guerrière, de la loyauté envers le seigneur 
+                    féodal et du statut social. Seuls les guerriers de haut rang avaient le droit de le porter. 
+                    Au fil des années, le katana est devenu un symbole de la puissance militaire du Japon et une fierté nationale.
+                </p>
+                <p>
+                    Désormais sur le champ de bataille, tu ne manipules plus une simple arme, mais une œuvre d’art fonctionnelle, 
+                    un symbole d’élégance et de puissance. Ce sabre japonais est fabriqué à partir d’acier de haute qualité et 
+                    forgé avec un savoir-faire exceptionnel, lui conférant une extrême solidité et une incroyable capacité de coupe. 
+                    Il se distingue par une lame incurvée et un tranchant acéré.
+                </p>
+                <p>
+                    Tu t’élances maintenant à dos de cheval, prêt à trancher tes ennemis... <br>
+                    <strong>CRACK</strong>, ton bâton s’est cassé… 
+                </p>
+            </div>
+        </div>  
+    </section>
+
+    <p class="plus">En apprendre plus sur les samouraïs !!</p>
+
+    <div class="container-btn-group">
+        <div class="container-btn">
+            <a href="Casque.html" class="btn-retour">Le kabuto : le casque du samouraïs</a>
+        </div>
+        <div class="container-btn">
+            <a href="Carte.html" class="btn-retour">Carte du Japon !</a>
+        </div>
+        <div class="container-btn">
+            <a href="../index.html" class="btn-retour">Carte du monde !</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Projet : SAE402 | Modélisation du katana : Alexandre Hamon | Modélisation du casque : Jimryce Jouenne | Développement du site : Alexandre Hamon et Jimryce Jouenne</p>
+        <p>La description des objets a été réalisée par le modélisateur correspondant à l'objet.</p>
+    </footer>    
+
+    <script>
+            document.addEventListener("scroll", function () {
+            let scrollY = window.scrollY;
+
+            // Sélection des éléments
+            let title = document.querySelector(".grostitre");
+            let links = document.querySelector(".link");
+            let firstRow = document.querySelector("#katana");
+            let secondRow = document.querySelector("#casque");
+
+            // Disparition du titre et des liens progressivement
+            if (scrollY > 50) {
+                title.classList.add("hidden");
+                links.classList.add("hidden");
+            } else {
+                title.classList.remove("hidden");
+                links.classList.remove("hidden");
+            }
+
+            // Apparition de la première row
+            if (scrollY > 150) {
+                firstRow.classList.add("visible");
+            } else {
+                firstRow.classList.remove("visible");
+            }
+        });
+    </script>
+
+</body>
+</html>
